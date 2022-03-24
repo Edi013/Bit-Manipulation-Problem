@@ -2,21 +2,27 @@
 
 using namespace std;
 
-int v1[10], v2[10], i, k, c;
+int v1[10], v2[10], i, k, c, Input, uc;
 int vR[10];
 bool programPornit = true;
 
 int main() {
 
-	cout << "Introduceti primele 10 cifre , cu spatii intre cifre " << endl;
+	cout << "Introduceti un numar de 10 cifre in binar, fara spatii intre cifre" << endl;
+	cin >> Input;
 	for (i = 0; i <= 9; i++)
 	{
-		cin >> v1[i];
+		uc = Input % 10;
+		Input = Input / 10;
+		v1[i] = uc;
 	}
-	cout << "Introduceti al doilea set de 10 cifre, cu spatii intre cifre " << endl;
+	cout << "Introduceti inca un numar de 10 cifre in binar,  fara spatii intre cifre" << endl;
+	cin >> Input;
 	for (i = 0; i <= 9; i++)
 	{
-		cin >> v2[i];
+		uc = Input % 10;
+		Input = Input / 10;
+		v2[i] = uc;
 	}
 
 	while (programPornit)
@@ -77,3 +83,4 @@ int main() {
 
 	return 0;
 }
+
